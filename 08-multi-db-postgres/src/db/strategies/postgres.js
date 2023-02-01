@@ -5,6 +5,8 @@ class Postgres extends ICrud{
         super()
     }
 
+    
+
     create(item){
         console.log("O item foi salvo no postgres")
     }
