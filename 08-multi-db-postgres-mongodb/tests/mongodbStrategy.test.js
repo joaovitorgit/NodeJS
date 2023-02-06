@@ -32,6 +32,22 @@ describe('MongoDB Suite de testes', function () {
         
         assert.deepEqual({ nome, poder }, MOCK_HEROI_CADASTRAR)
     })
+    it('Listar', async()=>{
+        const [{nome, poder}]  = await context.read({nome: MOCK_HEROI_CADASTRAR.nome})
+        const result = {
+            nome, poder
+        }
+        assert.deepEqual(result,MOCK_HEROI_CADASTRAR)
+    })
+    it('Atualizar', async()=>{
+        const result = await context.update(MOCK_HEROI_ATUALIZAR_ID , {nome: 'Iron-man'})
+        assert.deepEqual(result.nModified, 1)
+    })
+    it('Remover', async()=>{
+        const result = await context.delete(MOCK_HEROI_ATUALIZAR_ID)
+        assert.deepEqual(result.n, 1)
+    })
 
+    
    
 })
