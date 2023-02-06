@@ -61,14 +61,14 @@ class MongoDB extends ICrud {
         return this._herois.create(item)
     }
     async read(item = {}) {
-        return this._herois.find(item, { nome: 1, poder: 1, insertedAt: 1})
+        
     }
     async update(id, item) {
-        return this._herois.updateOne({_id: id}, { $set: item})
+        
     }
     
     async delete(id) {
-        return this._herois.deleteOne({_id: id})
+        
     }
 }
 

@@ -22,8 +22,8 @@
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(
   'herois', //database
-  'erickwendel', // user
-  'minhasenhasecreta', //senha
+  'joaovitor', // user
+  'root', //senha
   {
     host: 'localhost',
     dialect: 'postgres',
