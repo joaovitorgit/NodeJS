@@ -7,13 +7,13 @@ class ContextStrategy extends IDb {
   isConnected() {
     return this._database.isConnected();
   }
-  static connect() {
+  connect() {
     return this._database.connect()
   }
   create(item) {
     return this._database.create(item);
   }
-  read(item, skip, limit) {
+  read(item) {
     return this._database.read(item);
   }
   update(id, item) {
