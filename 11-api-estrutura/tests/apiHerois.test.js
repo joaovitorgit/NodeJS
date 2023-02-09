@@ -18,4 +18,6 @@ describe('Suite de testes da API heroes', function(){
         assert.deepEqual(statusCode, 200)
         assert.ok(Array.isArray(dados))
     })
+
+ 
 })

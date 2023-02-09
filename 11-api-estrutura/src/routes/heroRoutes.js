@@ -10,7 +10,13 @@ class HeroRoutes extends BaseRoute{
             path: '/herois',
             method: 'GET',
             handler: (request, handler)=>{
-                return this.db.read()
+                try{
+                    return this.db.read()
+                }
+                catch(error){
+                    console.log('Um erro ocorreu no list', error)
+                    return "Erro interno no servidor"
+                }
             }
         }
     }
